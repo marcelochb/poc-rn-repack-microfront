@@ -9,7 +9,7 @@
     "android-build-debug": "cd android && ./gradlew assembleDebug && cd ..",
     "pod": "cd ios && pod install && cd ..",
     "test": "jest",
-    "start": "react-native start",
+    "start": "react-native webpack-start",
     "ios": "npx react-native run-ios",
     "run:ios:rebuild": "yarn rebuild:ios && yarn ios",
     "run:ios:nodemodules": "yarn rebuild:nodemodules && yarn ios",
@@ -37,12 +37,14 @@
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
+    "@callstack/repack": "^3.2.0",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^29.2.1",
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "babel-jest": "^29.2.1",
+    "babel-loader": "^9.1.2",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^34.0.1",
     "eslint-import-resolver-typescript": "^3.5.5",
@@ -54,7 +56,9 @@
     "metro-react-native-babel-preset": "0.73.9",
     "prettier": "^2.4.1",
     "react-test-renderer": "18.2.0",
-    "typescript": "*"
+    "terser-webpack-plugin": "^5.3.9",
+    "typescript": "*",
+    "webpack": "^5.83.1"
   },
   "jest": {
     "preset": "react-native"
