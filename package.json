@@ -9,7 +9,7 @@
     "android-build-debug": "cd android && ./gradlew assembleDebug && cd ..",
     "pod": "cd ios && pod install && cd ..",
     "test": "jest",
-    "start": "react-native webpack-start",
+    "start": "react-native webpack-start --port 9000",
     "ios": "npx react-native run-ios",
     "run:ios:rebuild": "yarn rebuild:ios && yarn ios",
     "run:ios:nodemodules": "yarn rebuild:nodemodules && yarn ios",
