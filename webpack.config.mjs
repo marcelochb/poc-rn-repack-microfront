@@ -87,7 +87,15 @@ export default (env) => {
        * in their `package.json` might not work correctly.
        */
       ...Repack.getResolveOptions(platform),
-
+      fallback: {
+        assert: path.resolve(dirname,'node_modules/assert/index.js'),
+        http: path.resolve(dirname,'node_modules/stream-http/index.js'),
+        https: path.resolve(dirname,'node_modules/https-browserify/index.js'),
+        stream: path.resolve(dirname,'node_modules/stream-browserify/index.js'),
+        url: path.resolve(dirname,'node_modules/url/index.js'),
+        util: path.resolve(dirname,'node_modules/util/index.js'),
+        zlib: path.resolve(dirname,'node_modules/browserify-zlib/src/index.js'),
+      },
       /**
        * Uncomment this to ensure all `react-native*` imports will resolve to the same React Native
        * dependency. You might need it when using workspaces/monorepos or unconventional project
@@ -193,7 +201,7 @@ export default (env) => {
          * ```
          */
         {
-          test: Repack.getAssetExtensionsRegExp(Repack.ASSET_EXTENSIONS),
+          test: Repack.getAssetExtensionsRegExp(Repack.ASSET_EXTENSIONS.filter((ext) => ext !== 'svg')),
           use: {
             loader: '@callstack/repack/assets-loader',
             options: {
@@ -206,6 +214,16 @@ export default (env) => {
                */
               scalableAssetExtensions: Repack.SCALABLE_ASSETS,
             },
+          },
+        },
+        {
+          test: Repack.getAssetExtensionsRegExp(Repack.ASSET_EXTENSIONS.filter((ext) => ext === 'svg')),
+          use: {
+            loader: '@svgr/webpack',
+            options: {
+              native: true,
+              dimensions: true,
+            }
           },
         },
       ],
@@ -234,7 +252,7 @@ export default (env) => {
       new Repack.plugins.ModuleFederationPlugin({
         name: 'repackloan',
         exposes: {
-          './App': './App.tsx',
+          './App': './src/App.tsx',
         },
         shared: {
           react: {
