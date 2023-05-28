@@ -1,6 +1,7 @@
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import * as Repack from '@callstack/repack';
+const STANDALONE = Boolean(process.env.STANDALONE);
 
 /**
  * More documentation, installation, usage, motivation and differences with Metro is available at:
@@ -252,15 +253,18 @@ export default (env) => {
       new Repack.plugins.ModuleFederationPlugin({
         name: 'repackloan',
         exposes: {
+          // './App': './App.tsx',
+          // './App': './src/screens/list/LoanListScreen.tsx',
           './App': './src/App.tsx',
         },
         shared: {
           react: {
             ...Repack.Federated.SHARED_REACT,
-            requiredVersion: '18.2.0',
+            eager: STANDALONE, // to be figured out
           },
           'react-native': {
             ...Repack.Federated.SHARED_REACT_NATIVE,
+            eager: STANDALONE, // to be figured out
             requiredVersion: '0.71.7',
           },
         },
