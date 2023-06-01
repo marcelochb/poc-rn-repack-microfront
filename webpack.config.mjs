@@ -253,18 +253,16 @@ export default (env) => {
       new Repack.plugins.ModuleFederationPlugin({
         name: 'repackloan',
         exposes: {
-          // './App': './App.tsx',
-          // './App': './src/screens/list/LoanListScreen.tsx',
-          './App': './src/App.tsx',
+          './List': './src/screens/list/repack.tsx',
+          './Create': './src/screens/create/repack.tsx',
         },
         shared: {
           react: {
             ...Repack.Federated.SHARED_REACT,
-            eager: STANDALONE, // to be figured out
+            requiredVersion: '18.2.0',
           },
           'react-native': {
             ...Repack.Federated.SHARED_REACT_NATIVE,
-            eager: STANDALONE, // to be figured out
             requiredVersion: '0.71.7',
           },
         },

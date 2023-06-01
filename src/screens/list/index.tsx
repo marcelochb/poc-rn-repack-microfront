@@ -1,12 +1,13 @@
 import React, { useCallback } from 'react'
-import { LoanListTemplate } from '@poc/templates'
-import { LoanEntity, useLoanListController } from '@poc/core'
+import { LoanListTemplate } from '../../../packages/templates/src/loan/list/view'
+import { LoanEntity } from '../../../packages/core/src/modules/loan/domain/entities/'
+import { useLoanListController } from '../../../packages/core/src/modules/loan/presenter/list/controller'
 import { useNavigation } from '@react-navigation/native'
 import { NAVIGATOR_CONSTANTS } from '../../constants'
-import { IGlobalState } from '@poc/interfaces'
-import { ThemeBase } from '@poc/theme'
+import { ThemeBase } from '../../../packages/theme/src/themes'
+import { IRepackComponent } from '../../../packages/interfaces';
 
-export const LoanListScreen = () => {
+export const LoanListScreen: React.FC<IRepackComponent> = ({theme=ThemeBase.Midway, callBack}) => {
   const navigation = useNavigation<any>();
   const navigateToDetail = useCallback(
       (item:LoanEntity) => {
@@ -15,13 +16,14 @@ export const LoanListScreen = () => {
   )
   const navigateToCreate = useCallback(
       () => {
-      navigation.navigate(NAVIGATOR_CONSTANTS.CREATE_SCREEN_NAME);
+      if (callBack != null) callBack?.call(this);
+      else navigation.navigate(NAVIGATOR_CONSTANTS.CREATE_SCREEN_NAME);
     },[]
   )
   const {data,error,loading} = useLoanListController();
   return (
     <LoanListTemplate 
-      theme={ThemeBase.Midway} 
+      theme={theme} 
       listData={data} 
       error={error}
       loading={loading}

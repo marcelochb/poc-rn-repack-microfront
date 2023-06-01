@@ -8,7 +8,7 @@ export const Routes = () => (
   <Stack.Navigator screenOptions={{headerBackTitleVisible: false}}>
     {
       screens.map(screen => (
-        <Stack.Screen 
+        <Stack.Screen key={screen.name} navigationKey={screen.name}
           name={screen.name}
           component={screen.component}
           options={{title: screen.title}}

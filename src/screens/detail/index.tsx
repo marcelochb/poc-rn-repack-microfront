@@ -1,7 +1,7 @@
 import React from 'react';
-import { ThemeBase } from '@poc/theme';
-import { LoanDetailTemplate } from '@poc/templates';
-import { useLoanDetailController } from '@poc/core';
+import { ThemeBase } from '../../../packages/theme/src/themes';
+import { LoanDetailTemplate } from '../../../packages/templates/src/loan/detail/view';
+import { useLoanDetailController } from '../../../packages/core/src/modules/loan/presenter/detail/controller';
 import { IGlobalState } from '@poc/interfaces';
 
 export const LoanDetailScreen = () => {
