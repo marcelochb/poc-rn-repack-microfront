@@ -7,16 +7,21 @@ import { NAVIGATOR_CONSTANTS } from '../../constants'
 import { ThemeBase } from '../../../packages/theme/src/themes'
 import { IRepackComponent } from '../../../packages/interfaces';
 
-export const LoanListScreen: React.FC<IRepackComponent> = ({theme=ThemeBase.Midway, callBack}) => {
+export const LoanListScreen: React.FC<IRepackComponent<LoanEntity>> = ({
+  theme=ThemeBase.Midway, 
+  callBack, 
+  callBackBy
+}) => {
   const navigation = useNavigation<any>();
   const navigateToDetail = useCallback(
       (item:LoanEntity) => {
-      navigation.navigate(NAVIGATOR_CONSTANTS.DETAIL_SCREEN_NAME, {id: item.id});
+      if (callBackBy != null) callBackBy(item);
+      else navigation.navigate(NAVIGATOR_CONSTANTS.DETAIL_SCREEN_NAME, {data: item});
     },[]
   )
   const navigateToCreate = useCallback(
       () => {
-      if (callBack != null) callBack?.call(this);
+      if (callBack != null) callBack();
       else navigation.navigate(NAVIGATOR_CONSTANTS.CREATE_SCREEN_NAME);
     },[]
   )

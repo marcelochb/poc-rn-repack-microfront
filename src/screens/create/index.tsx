@@ -3,13 +3,21 @@ import { LoanCreateTemplate } from '../../../packages/templates/src/loan/create/
 import { ThemeBase } from '../../../packages/theme/src/themes'
 import { useLoanCreateController } from '../../../packages/core/src/modules/loan/presenter/create/controller'
 import { IRepackComponent } from '../../../packages/interfaces'
+import { useNavigation } from '@react-navigation/native'
 
 export const LoanCreateScreen: React.FC<IRepackComponent> = ({theme = ThemeBase.Midway, callBack}) => {
+  const navigation = useNavigation<any>();
+  const goBack = useCallback(
+    () => {
+      if (callBack) callBack();
+      else navigation.goBack();
+    },[]
+  )
   const {data,error,loading,onChange,onSubmit} = useLoanCreateController(callBack);
   return (
     <LoanCreateTemplate
       error={error}
-      theme={ThemeBase.Midway}
+      theme={theme}
       nameLabel='Nome'
       nameValue={data.name}
       nameChangeText={onChange('name')}
@@ -22,7 +30,7 @@ export const LoanCreateScreen: React.FC<IRepackComponent> = ({theme = ThemeBase.
       submitButtonLabel='Salvar'
       onSubmit={onSubmit}
       cancelButtonLabel='Agora não'
-      onCancel={() => callBack?.call(this)}
+      onCancel={goBack}
       isLoading={loading}
     />
   )

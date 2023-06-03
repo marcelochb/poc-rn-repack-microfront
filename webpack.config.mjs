@@ -255,6 +255,7 @@ export default (env) => {
         exposes: {
           './List': './src/screens/list/repack.tsx',
           './Create': './src/screens/create/repack.tsx',
+          './Detail': './src/screens/detail/repack.tsx',
         },
         shared: {
           react: {
