@@ -8,8 +8,10 @@ import { useRoute } from '@react-navigation/native';
 import { ILoanDetailNavigationRoute } from './interfaces';
 
 export const LoanDetailScreen: React.FC<IRepackComponent<LoanEntity>> = ({data: repackData, theme = ThemeBase.Midway}) => {
-  const {params} = useRoute<ILoanDetailNavigationRoute>()
-  const {loading,error,data} = useLoanDetailController(repackData ?? params.data);
+  var route = {} as ILoanDetailNavigationRoute;
+  if (repackData == null) route = useRoute<ILoanDetailNavigationRoute>();
+  
+  const {loading,error,data} = useLoanDetailController(route?.params?.data ?? repackData);
   return (
     <LoanDetailTemplate 
       theme={theme}
