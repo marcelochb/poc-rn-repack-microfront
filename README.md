@@ -1,1 +1,54 @@
-# poc-rn-repack-microfront
+# [POC] Re.Pack React Native com Code Splitting, Packages e Clean Architecture.
+  Com o objetivo de paralelizar e facilitar a organização de grandes projetos para aplicações mobile, foi criado um POC (prove of concept) com uma aplicação principal, e um code split com a jornadas dos modulo de empréstimo, e packages de ferramentas para auxiliar na infraestrutura.
+
+### Tecnologias usadas
+
+- React Native
+- Typescript
+- React-Navigation
+- Inversify (inject dependency to clean architecture)
+- Redux
+
+## Estrutura do projeto
+
+
+Projeto
+- packages => Microfronts e Package-tool
+  - core => Microfont com a regra de negócio (clean, testes unitários e estado global).
+  - interfaces => Package-Tool com as interfaces de comunicação entre microfronts.
+  - templates => Package-Tool com o template das screens utilizadas pelos microfront de jornada..
+  - theme => Package-Tool com a estrutura de tema para toda aplicação.
+  - ui => Package-Tool de componentes usado para montar os templates.
+- src
+  - assets: Application images, videos, gifs and others.
+   - config: Tools used by all project.
+    - typescript: Declarations class. 
+  - routes: React Navigation config.
+  - screens: Main app screens.
+
+### Como compilar e rodar o projeto
+
+- Faça o clone do projeto
+```bash
+git clone --recursive -j8 https://github.com/marcelochb/poc-rn-repack-main.git
+```
+- Instale as dependências
+```bash
+yarn && npx lerna bootstrap
+```
+- Iniciar Webpack Remoto
+```bash
+yarn start-repack
+```
+- Iniciar Webpack Local
+```bash
+yarn start
+```
+- Rodar Android
+```bash
+yarn android
+```
+- Rodar iOS
+```bash
+yarn pod && yarn ios
+```
