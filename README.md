@@ -30,7 +30,7 @@ Projeto
 
 - Faça o clone do projeto
 ```bash
-git clone --recursive -j8 https://github.com/marcelochb/poc-rn-repack-main.git
+git clone --recursive -j8 https://github.com/marcelochb/poc-rn-repack-microfront.git
 ```
 - Instale as dependências
 ```bash
