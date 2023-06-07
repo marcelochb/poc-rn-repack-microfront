@@ -40,10 +40,6 @@ yarn && npx lerna bootstrap
 ```bash
 yarn start
 ```
-- Rodar Android
-```bash
-yarn android
-```
 - Rodar iOS
 ```bash
 yarn pod && yarn ios
