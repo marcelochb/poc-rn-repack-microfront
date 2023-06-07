@@ -42,6 +42,10 @@ yarn && npx lerna bootstrap
 ```bash
 yarn start
 ```
+- Instalando e Iniciando Json Server
+```bash
+brew install json-server && json-server --watch db.json
+```
 - Rodar iOS
 ```bash
 yarn pod && yarn ios
