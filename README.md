@@ -1,6 +1,10 @@
 # [POC] Re.Pack React Native com Code Splitting, Packages e Clean Architecture.
   Com o objetivo de paralelizar e facilitar a organização de grandes projetos para aplicações mobile, foi criado um POC (prove of concept) com uma aplicação principal, e um code split com a jornadas dos modulo de empréstimo, e packages de ferramentas para auxiliar na infraestrutura.
 
+Demo:
+
+![iOS Demo App](demo.gif)
+
 ### Tecnologias usadas
 
 - React Native
@@ -9,10 +13,8 @@
 - Inversify (inject dependency to clean architecture)
 - Redux
 
-## Estrutura do projeto
+### Estrutura do projeto
 
-
-Projeto
 - packages => Microfronts e Package-tool
   - core => Microfont com a regra de negócio (clean, testes unitários e estado global).
   - interfaces => Package-Tool com as interfaces de comunicação entre microfronts.
