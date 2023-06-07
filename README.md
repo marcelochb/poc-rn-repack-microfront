@@ -36,10 +36,6 @@ git clone --recursive -j8 https://github.com/marcelochb/poc-rn-repack-microfront
 ```bash
 yarn && npx lerna bootstrap
 ```
-- Iniciar Webpack Remoto
-```bash
-yarn start-repack
-```
 - Iniciar Webpack Local
 ```bash
 yarn start
