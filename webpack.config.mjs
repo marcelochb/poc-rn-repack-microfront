@@ -1,6 +1,7 @@
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import * as Repack from '@callstack/repack';
+
 const STANDALONE = Boolean(process.env.STANDALONE);
 
 /**
@@ -23,7 +24,7 @@ export default (env) => {
     mode = 'development',
     context = Repack.getDirname(import.meta.url),
     entry = './index.js',
-    platform = process.env.PLATFORM,
+    platform = process.env.PLATFORM || 'android',
     minimize = mode === 'production',
     devServer = undefined,
     bundleFilename = undefined,
@@ -38,7 +39,7 @@ export default (env) => {
     throw new Error('Missing platform');
   }
 
-    /**
+  /**
    * Using Module Federation might require disabling hmr.
    * Uncomment below to set `devServer.hmr` to `false`.
    *
@@ -47,10 +48,10 @@ export default (env) => {
    * to check its value to avoid accessing undefined value,
    * otherwise an error might occur.
    */
-  // if (devServer) {
-  //   devServer.hmr = false;
-  // }
-  
+  if (devServer) {
+    devServer.hmr = false;
+  }
+
   /**
    * Depending on your Babel configuration you might want to keep it.
    * If you don't use `env` in your Babel config, you can remove it.
@@ -115,8 +116,7 @@ export default (env) => {
      */
     output: {
       clean: true,
-      hashFunction: 'xxhash64',
-      path: path.join(dirname, 'build/generated', platform),
+      path: path.join(dirname, 'build', platform),
       filename: 'index.bundle',
       chunkFilename: '[name].chunk.bundle',
       publicPath: Repack.getPublicPath({ platform, devServer }),
@@ -202,7 +202,9 @@ export default (env) => {
          * ```
          */
         {
-          test: Repack.getAssetExtensionsRegExp(Repack.ASSET_EXTENSIONS.filter((ext) => ext !== 'svg')),
+          test: Repack.getAssetExtensionsRegExp(
+            Repack.ASSET_EXTENSIONS.filter((ext) => ext !== 'svg')
+          ),
           use: {
             loader: '@callstack/repack/assets-loader',
             options: {
@@ -218,14 +220,16 @@ export default (env) => {
           },
         },
         {
-          test: Repack.getAssetExtensionsRegExp(Repack.ASSET_EXTENSIONS.filter((ext) => ext === 'svg')),
-          use: {
-            loader: '@svgr/webpack',
-            options: {
-              native: true,
-              dimensions: true,
-            }
-          },
+          test: /\.svg$/,
+          use: [
+            {
+              loader: '@svgr/webpack',
+              options: {
+                native: true,
+                dimensions: true,
+              },
+            },
+          ],
         },
       ],
     },
@@ -250,6 +254,7 @@ export default (env) => {
           assetsPath,
         },
       }),
+
       new Repack.plugins.ModuleFederationPlugin({
         name: 'repackloan',
         exposes: {
@@ -260,14 +265,16 @@ export default (env) => {
         shared: {
           react: {
             ...Repack.Federated.SHARED_REACT,
+            eager: STANDALONE, // to be figured out
             requiredVersion: '18.2.0',
           },
           'react-native': {
             ...Repack.Federated.SHARED_REACT_NATIVE,
+            eager: STANDALONE, // to be figured out
             requiredVersion: '0.71.7',
           },
         },
-      }),            
+      }),
     ],
   };
 };
