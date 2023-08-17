@@ -258,9 +258,7 @@ export default (env) => {
       new Repack.plugins.ModuleFederationPlugin({
         name: 'repackloan',
         exposes: {
-          './List': './src/screens/list/repack.tsx',
-          './Create': './src/screens/create/repack.tsx',
-          './Detail': './src/screens/detail/repack.tsx',
+          './App': './src/routes/index.tsx',
         },
         shared: {
           react: {
@@ -273,6 +271,16 @@ export default (env) => {
             eager: STANDALONE, // to be figured out
             requiredVersion: '0.71.7',
           },
+          '@react-navigation/native': {
+            singleton: true,
+            eager: STANDALONE,
+            requiredVersion: '6.1.6',
+          },
+          '@react-navigation/stack': {
+            singleton: true,
+            eager: STANDALONE,
+            requiredVersion: '6.3.16',
+          },          
         },
       }),
     ],

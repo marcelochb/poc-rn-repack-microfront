@@ -1,23 +1,23 @@
 import React, { useCallback } from 'react'
 import { LoanCreateTemplate } from '../../../packages/templates/src/loan/create/view'
-import { ThemeBase } from '../../../packages/theme/src/themes'
 import { useLoanCreateController } from '../../../packages/core/src/modules/loan/presenter/create/controller'
-import { IRepackComponent } from '../../../packages/interfaces'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useRoute } from '@react-navigation/native'
+import { ILoanCreateNavigationRoute } from './interfaces'
+import { ThemeBase } from '../../../packages/theme'
 
-export const LoanCreateScreen: React.FC<IRepackComponent> = ({theme = ThemeBase.Midway, callBack}) => {
+export const LoanCreateScreen = () => {
+  const route = useRoute<ILoanCreateNavigationRoute>();
   const navigation = useNavigation<any>();
   const goBack = useCallback(
     () => {
-      if (callBack) callBack();
-      else navigation.goBack();
+      navigation.goBack();
     },[]
   )
-  const {data,error,loading,onChange,onSubmit} = useLoanCreateController(callBack);
+  const {data,error,loading,onChange,onSubmit} = useLoanCreateController(goBack);
   return (
     <LoanCreateTemplate
       error={error}
-      theme={theme}
+      theme={route?.params?.theme ?? ThemeBase.Midway}
       nameLabel='Nome'
       nameValue={data.name}
       nameChangeText={onChange('name')}
