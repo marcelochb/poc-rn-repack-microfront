@@ -5,7 +5,7 @@ import { IRepackComponent } from '../../packages/interfaces';
 
 const Stack = createStackNavigator();
 
-const Routes:React.FC<IRepackComponent> = ({theme}) => (
+const Routes = () => (
   <Stack.Navigator screenOptions={{headerBackTitleVisible: false}}>
     {
       screens.map(screen => (
@@ -13,7 +13,7 @@ const Routes:React.FC<IRepackComponent> = ({theme}) => (
           name={screen.name}
           component={screen.component}
           options={{title: screen.title}}
-          initialParams={theme}
+          initialParams={{data: 'teste'}}
         />
       ))
     }

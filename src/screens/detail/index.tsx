@@ -4,14 +4,17 @@ import { useLoanDetailController } from '../../../packages/core/src/modules/loan
 import { useRoute } from '@react-navigation/native';
 import { ILoanDetailNavigationRoute } from './interfaces';
 import { ThemeBase } from '../../../packages/theme';
+import { useSelector } from 'react-redux';
+import { IGlobalState } from '../../../packages/interfaces';
 
 export const LoanDetailScreen = () => {
   const route = useRoute<ILoanDetailNavigationRoute>();
+  const theme = useSelector((state:IGlobalState) => state.theme.value)
   
   const {loading,error,data} = useLoanDetailController(route?.params?.data);
   return (
     <LoanDetailTemplate 
-      theme={route?.params?.theme ?? ThemeBase.Midway}
+      theme={theme}
       loading={loading}
       error={error}
       data={data}

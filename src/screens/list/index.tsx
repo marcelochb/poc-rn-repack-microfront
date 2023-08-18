@@ -6,10 +6,14 @@ import { useNavigation, useRoute } from '@react-navigation/native'
 import { NAVIGATOR_CONSTANTS } from '../../constants'
 import { ThemeBase } from '../../../packages/theme/src/themes'
 import { ILoanListNavigationRoute } from './interfaces'
+import { Text } from 'react-native'
+import { useSelector } from 'react-redux'
+import { IGlobalState } from '../../../packages/interfaces'
 
 export const LoanListScreen = () => {
+  const theme = useSelector((state:IGlobalState) => state.theme.value)
+
   const route = useRoute<ILoanListNavigationRoute>();
-  const theme = route?.params?.theme ?? ThemeBase.Midway;
   const navigation = useNavigation<any>();
   const navigateToDetail = useCallback(
       (item:LoanEntity) => {
@@ -30,6 +34,6 @@ export const LoanListScreen = () => {
       loading={loading}
       callBack={navigateToDetail}
       navigateToCreate={navigateToCreate}
-    />
+      />
   )
 }

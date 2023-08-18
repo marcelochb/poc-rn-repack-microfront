@@ -3,14 +3,17 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import Routes from './routes';
-import { ThemeBase } from "../packages/theme";
+import { Provider } from "react-redux";
+import { store } from "./screens/store";
 function App(): JSX.Element {
   return (
+    <Provider store={store}>
       <SafeAreaProvider>
         <NavigationContainer>
-          <Routes theme={ThemeBase.Midway} />
+          <Routes />
         </NavigationContainer>
       </SafeAreaProvider>
+    </Provider>
   );
 };
 
