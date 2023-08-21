@@ -12,12 +12,12 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2FA24FCD2BEF4B3B9DCD9085 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C63C3B9D43748CCB7430079 /* Roboto-Regular.ttf */; };
-		37D055729B9D2E249CD126F7 /* libPods-repackloan-repackloanTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16BC0F640D8181A9CEC1F7E /* libPods-repackloan-repackloanTests.a */; };
 		3A5676870D574D349620CAA2 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462E6CA133374FECB1BA3CC0 /* Roboto-Italic.ttf */; };
+		6027D2AF3E7AD65FA0A0B66C /* libPods-repackloan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE757F03A1F8737A5910F3FD /* libPods-repackloan.a */; };
+		6DB0FC832B27408EA65E5DCC /* libPods-repackloan-repackloanTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC790BA5132B15E3D32CE178 /* libPods-repackloan-repackloanTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		87E29329623347348E0ED73C /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24C689C7625F4AFDB3DAEDE0 /* Roboto-Bold.ttf */; };
 		AFBC374B9725433F9DF3A267 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93A510ECD67A4A2B98936DF9 /* Roboto-LightItalic.ttf */; };
-		D75426E1F89F48E4FC32D0B9 /* libPods-repackloan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 028BA50D4198980DA27655F1 /* libPods-repackloan.a */; };
 		F0B33F2345E14625B15F168E /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C04BD9B26CD4C98AC768D1D /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +35,6 @@
 		00E356EE1AD99517003FC87E /* repackloanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = repackloanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* repackloanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = repackloanTests.m; sourceTree = "<group>"; };
-		028BA50D4198980DA27655F1 /* libPods-repackloan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-repackloan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A1D81ED270BCCAB3FE2FDBE /* Pods-repackloan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-repackloan.debug.xcconfig"; path = "Target Support Files/Pods-repackloan/Pods-repackloan.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* repackloan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repackloan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = repackloan/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = repackloan/AppDelegate.mm; sourceTree = "<group>"; };
@@ -46,14 +44,16 @@
 		24C689C7625F4AFDB3DAEDE0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3C04BD9B26CD4C98AC768D1D /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/assets/Fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		462E6CA133374FECB1BA3CC0 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../src/assets/Fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
-		488EE54A09B02E69E6BFBEAA /* Pods-repackloan-repackloanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-repackloan-repackloanTests.debug.xcconfig"; path = "Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		60F8B9E93020D069EF2E4284 /* Pods-repackloan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-repackloan.release.xcconfig"; path = "Target Support Files/Pods-repackloan/Pods-repackloan.release.xcconfig"; sourceTree = "<group>"; };
+		71BA93B5838172B7DDF509A9 /* Pods-repackloan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-repackloan.debug.xcconfig"; path = "Target Support Files/Pods-repackloan/Pods-repackloan.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = repackloan/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C63C3B9D43748CCB7430079 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		93A510ECD67A4A2B98936DF9 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-LightItalic.ttf"; path = "../src/assets/Fonts/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
-		A73D893F2E19954B121ED78E /* Pods-repackloan-repackloanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-repackloan-repackloanTests.release.xcconfig"; path = "Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests.release.xcconfig"; sourceTree = "<group>"; };
-		B16BC0F640D8181A9CEC1F7E /* libPods-repackloan-repackloanTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-repackloan-repackloanTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCD94CA3C67D0373E44DCFC9 /* Pods-repackloan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-repackloan.release.xcconfig"; path = "Target Support Files/Pods-repackloan/Pods-repackloan.release.xcconfig"; sourceTree = "<group>"; };
+		954F2BC27C3DB87FB758801F /* Pods-repackloan-repackloanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-repackloan-repackloanTests.release.xcconfig"; path = "Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests.release.xcconfig"; sourceTree = "<group>"; };
+		99BEAD8E06D958A718EDED2C /* Pods-repackloan-repackloanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-repackloan-repackloanTests.debug.xcconfig"; path = "Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC790BA5132B15E3D32CE178 /* libPods-repackloan-repackloanTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-repackloan-repackloanTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EE757F03A1F8737A5910F3FD /* libPods-repackloan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-repackloan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D055729B9D2E249CD126F7 /* libPods-repackloan-repackloanTests.a in Frameworks */,
+				6DB0FC832B27408EA65E5DCC /* libPods-repackloan-repackloanTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75426E1F89F48E4FC32D0B9 /* libPods-repackloan.a in Frameworks */,
+				6027D2AF3E7AD65FA0A0B66C /* libPods-repackloan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				028BA50D4198980DA27655F1 /* libPods-repackloan.a */,
-				B16BC0F640D8181A9CEC1F7E /* libPods-repackloan-repackloanTests.a */,
+				EE757F03A1F8737A5910F3FD /* libPods-repackloan.a */,
+				AC790BA5132B15E3D32CE178 /* libPods-repackloan-repackloanTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,10 +163,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0A1D81ED270BCCAB3FE2FDBE /* Pods-repackloan.debug.xcconfig */,
-				DCD94CA3C67D0373E44DCFC9 /* Pods-repackloan.release.xcconfig */,
-				488EE54A09B02E69E6BFBEAA /* Pods-repackloan-repackloanTests.debug.xcconfig */,
-				A73D893F2E19954B121ED78E /* Pods-repackloan-repackloanTests.release.xcconfig */,
+				71BA93B5838172B7DDF509A9 /* Pods-repackloan.debug.xcconfig */,
+				60F8B9E93020D069EF2E4284 /* Pods-repackloan.release.xcconfig */,
+				99BEAD8E06D958A718EDED2C /* Pods-repackloan-repackloanTests.debug.xcconfig */,
+				954F2BC27C3DB87FB758801F /* Pods-repackloan-repackloanTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -178,12 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "repackloanTests" */;
 			buildPhases = (
-				1F31B13606E03EEE9D9971A0 /* [CP] Check Pods Manifest.lock */,
+				2743E56E322CEE87C6692C7D /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				1564F7FB565BB9AF1DAE67D2 /* [CP] Embed Pods Frameworks */,
-				A6B1042ABED6EBA7D5ED716D /* [CP] Copy Pods Resources */,
+				E3F0E9DF770E3DA3DB7020D0 /* [CP] Embed Pods Frameworks */,
+				6113B535E9695228E8956770 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,14 +199,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "repackloan" */;
 			buildPhases = (
-				E6C0A7C8B0C8B743E6A0DBC5 /* [CP] Check Pods Manifest.lock */,
+				DFA82DCD0B2B50D4E637F6C1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				23F4B91E51934E3F7CC79EA9 /* [CP] Embed Pods Frameworks */,
-				6A2D3C95CD2A5553764EC6E1 /* [CP] Copy Pods Resources */,
+				CD5EF8CEC68513184455FFA7 /* [CP] Embed Pods Frameworks */,
+				70E6BD78AE98E1568819BBC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,24 +294,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport BUNDLE_COMMAND=webpack-bundle\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		1564F7FB565BB9AF1DAE67D2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1F31B13606E03EEE9D9971A0 /* [CP] Check Pods Manifest.lock */ = {
+		2743E56E322CEE87C6692C7D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,41 +316,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		23F4B91E51934E3F7CC79EA9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A2D3C95CD2A5553764EC6E1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A6B1042ABED6EBA7D5ED716D /* [CP] Copy Pods Resources */ = {
+		6113B535E9695228E8956770 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -384,7 +333,41 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E6C0A7C8B0C8B743E6A0DBC5 /* [CP] Check Pods Manifest.lock */ = {
+		70E6BD78AE98E1568819BBC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD5EF8CEC68513184455FFA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-repackloan/Pods-repackloan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFA82DCD0B2B50D4E637F6C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,6 +387,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3F0E9DF770E3DA3DB7020D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-repackloan-repackloanTests/Pods-repackloan-repackloanTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -458,7 +458,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 488EE54A09B02E69E6BFBEAA /* Pods-repackloan-repackloanTests.debug.xcconfig */;
+			baseConfigurationReference = 99BEAD8E06D958A718EDED2C /* Pods-repackloan-repackloanTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -485,7 +485,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A73D893F2E19954B121ED78E /* Pods-repackloan-repackloanTests.release.xcconfig */;
+			baseConfigurationReference = 954F2BC27C3DB87FB758801F /* Pods-repackloan-repackloanTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -509,7 +509,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A1D81ED270BCCAB3FE2FDBE /* Pods-repackloan.debug.xcconfig */;
+			baseConfigurationReference = 71BA93B5838172B7DDF509A9 /* Pods-repackloan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -537,7 +537,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCD94CA3C67D0373E44DCFC9 /* Pods-repackloan.release.xcconfig */;
+			baseConfigurationReference = 60F8B9E93020D069EF2E4284 /* Pods-repackloan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

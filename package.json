@@ -12,7 +12,7 @@
     "start": "STANDALONE=1 npx react-native webpack-start",
     "start-repack": "npx react-native webpack-start --port 5555",
     "ios": "npx react-native run-ios --simulator 'iPhone 14 Pro'",
-    "ios:release": "STANDALONE=0 npx react-native run-ios --configuration Release --simulator 'iPhone 14 Pro' --no-packager",
+    "ios:release": "STANDALONE=0 npx react-native run-ios --mode Release --simulator 'iPhone 14 Pro' --no-packager",
     "run:ios:rebuild": "yarn rebuild:ios && yarn ios",
     "run:ios:nodemodules": "yarn rebuild:nodemodules && yarn ios",
     "rebuild:ios": "yarn clean:nodemodules && yarn clean:ios && yarn clean:bundle && yarn build:ios",
